@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
@@ -32,7 +32,6 @@ requirements:
 test:
   requires:
     - pytest >=3
-    - python 3.5.*  # [win and py35]
   imports:
     - pandas_plink
   commands:
