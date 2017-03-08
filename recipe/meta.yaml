@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.9
     - pandas >=0.17
     - toolz >=0.8
-    - dask[complete] >=0.12
+    - dask >=0.12
 
 test:
   requires:
