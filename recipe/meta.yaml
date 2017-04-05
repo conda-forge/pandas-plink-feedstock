@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.1.4" %}
-{% set sha256 = "aeb00834f3bc6191bd729e58afeb6c6f3aacfc4fb64728140663bc493349c788" %}
+{% set version = "1.1.6" %}
+{% set sha256 = "f8c5ec35de98f472aea525a2295825011fad5ab63e5f85a4ea84767c37ec2a21" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or (win64 and not py36)]
+  skip: true  # [win32 or (win64 and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.9
     - pandas >=0.17
     - toolz >=0.8
-    - dask >=0.13
+    - dask >=0.14
 
 test:
   requires:
@@ -39,13 +39,13 @@ test:
     - python -c "import sys; import pandas_plink; sys.exit(pandas_plink.test())"
 
 about:
-  home: http://github.com/glimix/pandas-plink
+  home: https://github.com/limix/pandas-plink
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: 'Convert PLINK files to Pandas data frame'
-  doc_url: http://pandas-plink.readthedocs.io
-  dev_url: https://github.com/glimix/pandas-plink
+  doc_url: https://pandas-plink.readthedocs.io
+  dev_url: https://github.com/limix/pandas-plink
 
 extra:
   recipe-maintainers:
