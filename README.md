@@ -1,7 +1,7 @@
 About pandas-plink
 ==================
 
-Home: http://github.com/glimix/pandas-plink
+Home: https://github.com/limix/pandas-plink
 
 Package license: MIT
 
