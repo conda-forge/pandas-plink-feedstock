@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.1.6" %}
-{% set sha256 = "f8c5ec35de98f472aea525a2295825011fad5ab63e5f85a4ea84767c37ec2a21" %}
+{% set version = "1.1.7" %}
+{% set sha256 = "566004c46c5a6031de9f2b246ea1e79ee48d36c677fdcd1722ce59d3fca0aacd" %}
 
 package:
   name: {{ name|lower }}
@@ -12,19 +12,20 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: true  # [win32 or (win64 and py<35)]
+  number: 0
+  skip: true  # [win32 or linux32 or (win64 and py27)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - python
     - setuptools
+    - pytest-runner
     - cffi >=1.7
   run:
     - python
     - cffi >=1.7
-    - numpy >=1.10
+    - numpy >=1.11
     - pandas >=0.17
     - toolz >=0.8
     - dask >=0.14
