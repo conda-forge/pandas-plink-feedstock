@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.2.1" %}
-{% set sha256 = "c239281ae2d73431e66bbc662d664ab9647467b7b1fe26b61603f7744ce9ff8a" %}
+{% set version = "1.2.4" %}
+{% set sha256 = "1c86a0bddf6e686dc72cd56529c87e2cd09c2656cfc39e3cf730ab3bbc27e5ea" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or linux32 or (win64 and py27)]
+  skip: true  # [win32 or linux32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
