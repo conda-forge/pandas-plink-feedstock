@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.2.1" %}
-{% set sha256 = "c239281ae2d73431e66bbc662d664ab9647467b7b1fe26b61603f7744ce9ff8a" %}
+{% set version = "1.2.2" %}
+{% set sha256 = "e735a53473e8ec1097b017b40095f5c9b4a40bebf95854d27523404f2455dd65" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win32 or linux32]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
