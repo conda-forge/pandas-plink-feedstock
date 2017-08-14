@@ -29,6 +29,7 @@ requirements:
     - pandas >=0.17
     - toolz >=0.8
     - dask >=0.14
+    - tqdm >=4.15
 
 test:
   requires:
