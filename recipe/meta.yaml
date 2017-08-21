@@ -33,12 +33,13 @@ requirements:
 
 test:
   requires:
-    - pytest >=3
+    - pytest
+    - pytest-pep8
   imports:
-    - pandas_plink
     - pandas
+    - pandas_plink
   commands:
-    - python -c "import sys; import pandas_plink; sys.exit(pandas_plink.test())"
+    - python -c "import sys; import pandas; import pandas_plink; sys.exit(pandas_plink.test())"
 
 about:
   home: https://github.com/limix/pandas-plink
