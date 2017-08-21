@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.2.5" %}
-{% set sha256 = "f4ec6b9dea0903c23d3a82e804da56226352e9442bb2440ac6d24f9d2ba9fc66" %}
+{% set version = "1.2.8" %}
+{% set sha256 = "81a9b1107013375b05dd17fa61720c32b8a5792d3dee97d781dc1ff450db6bd2" %}
 
 package:
   name: {{ name|lower }}
@@ -43,7 +43,7 @@ about:
   home: https://github.com/limix/pandas-plink
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
   summary: 'Convert PLINK files to Pandas data frame'
   doc_url: https://pandas-plink.readthedocs.io
   dev_url: https://github.com/limix/pandas-plink
