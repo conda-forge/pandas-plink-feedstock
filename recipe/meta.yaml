@@ -36,6 +36,7 @@ test:
     - pytest >=3
   imports:
     - pandas_plink
+    - pandas
   commands:
     - python -c "import sys; import pandas_plink; sys.exit(pandas_plink.test())"
 
