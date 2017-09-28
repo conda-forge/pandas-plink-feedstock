@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or linux32]
+  skip: true
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
