@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.2.18" %}
-{% set sha256 = "6f476b591e6863a2995c8b446c10753fdf03b0b666cd567283b5fc2dbd789df2" %}
+{% set version = "1.2.25" %}
+{% set sha256 = "6d5f6f11e0bf246bbab0e086ca8a6121c46208bb99c19c69c34e195c676a8aec" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_plink-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -25,9 +25,9 @@ requirements:
     - python
     - cffi >=1.7
     - numpy >=1.11
-    - pandas >=0.17
-    - toolz >=0.8
-    - dask >=0.14
+    - pandas >=0.22
+    - toolz >=0.9
+    - dask >=0.15.3
     - tqdm >=4.15
 
 test:
@@ -44,7 +44,7 @@ about:
   home: https://github.com/limix/pandas-plink
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Convert PLINK files to Pandas data frame'
   doc_url: https://pandas-plink.readthedocs.io
   dev_url: https://github.com/limix/pandas-plink
