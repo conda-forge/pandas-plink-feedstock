@@ -12,19 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win and py27]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - "{{ compiler('c') }}"
   host:
-    - cffi >=1.11.5
+    - python
     - pip
     - pytest-runner
-    - python
-    - setuptools
+    - cffi >=1.7
   run:
     - cffi >=1.7
     - dask >=1.0
