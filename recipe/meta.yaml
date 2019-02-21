@@ -13,21 +13,27 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  skip: true  # [win and py27]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
+    - cffi >=1.11.5
+    - pip
+    - pytest-runner
     - python
     - setuptools
-    - pytest-runner
-    - cffi >=1.7
   run:
-    - python
     - cffi >=1.7
-    - numpy >=1.11
-    - pandas >=0.22
+    - dask >=1.0
+    - numpy >=1.12
+    - pandas >=0.23
+    - pytest >=3.3.2
+    - pytest-runner >=4.2
+    - python
     - toolz >=0.9
-    - dask >=0.15.3
     - tqdm >=4.15
 
 test:
