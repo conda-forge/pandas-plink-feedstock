@@ -24,6 +24,7 @@ requirements:
     - pytest-runner
     - cffi >=1.7
   run:
+    - Deprecated >=1.2.5
     - cffi >=1.7
     - dask >=1.0
     - numpy >=1.12
@@ -31,8 +32,11 @@ requirements:
     - pytest >=3.3.2
     - pytest-runner >=4.2
     - python
+    - python-magic >=0.4.15
     - toolz >=0.9
     - tqdm >=4.15
+    - xarray >=0.12.1
+    - zstandard >=0.11.1
 
 test:
   requires:
