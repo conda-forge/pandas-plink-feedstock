@@ -20,7 +20,7 @@ requirements:
   build:
     - "{{ compiler('c') }}"
   host:
-    - python >3
+    - python
     - pip
     - pytest-runner
     - cffi >=1.7
@@ -32,7 +32,7 @@ requirements:
     - pandas >=0.23
     - pytest >=3.3.2
     - pytest-runner >=4.2
-    - python >3
+    - python
     - toolz >=0.9
     - tqdm >=4.15
     - xarray >=0.12.1
@@ -50,7 +50,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Convert PLINK files to Pandas data frame'
+  summary: 'Convert PLINK files to data array'
   doc_url: https://pandas-plink.readthedocs.io
   dev_url: https://github.com/limix/pandas-plink
 
