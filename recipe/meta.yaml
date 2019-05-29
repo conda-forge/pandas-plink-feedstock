@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "1.2.31" %}
-{% set sha256 = "a617740a8e7320f4dab211f94b9e4bebe7ad6d90f5b5667542cde8370a34da6f" %}
+{% set version = "2.0.1" %}
+{% set sha256 = "c44c0834b1869efeb66166209fb9cefcc99eda3471fd43a238447e49f91dfef0" %}
 
 package:
   name: {{ name|lower }}
@@ -24,6 +24,7 @@ requirements:
     - pytest-runner
     - cffi >=1.7
   run:
+    - Deprecated >=1.2.5
     - cffi >=1.7
     - dask >=1.0
     - numpy >=1.12
@@ -33,11 +34,10 @@ requirements:
     - python
     - toolz >=0.9
     - tqdm >=4.15
+    - xarray >=0.12.1
+    - zstandard >=0.11.1
 
 test:
-  requires:
-    - pytest
-    - pytest-pep8
   imports:
     - pandas
     - pandas_plink
