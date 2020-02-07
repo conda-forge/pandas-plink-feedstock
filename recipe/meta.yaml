@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.0.3" %}
-{% set sha256 = "8434259a2fc6e958c45b85693d5229e5958ad41eb533f2b28a3e92918417a8cc" %}
+{% set version = "2.0.4" %}
+{% set sha256 = "215dcb78a82adf20ee01f5dae00507547f997c1cb926749f93d31a01f108bfa8" %}
 
 package:
   name: {{ name|lower }}
