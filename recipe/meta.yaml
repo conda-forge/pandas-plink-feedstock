@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.0.4" %}
-{% set sha256 = "215dcb78a82adf20ee01f5dae00507547f997c1cb926749f93d31a01f108bfa8" %}
+{% set version = "2.0.5" %}
+{% set sha256 = "586a4a404656b35e3ab6a897bcb94e1050b78ce7ce00c415937a5b3436cd8f23" %}
 
 package:
   name: {{ name|lower }}
@@ -13,12 +13,12 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
-  skip: True  # [py27]
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  skip: true  # [py27]
 
 requirements:
   build:
-    - "{{ compiler('c') }}"
+    - {{ compiler('c') }}
   host:
     - python
     - pip
@@ -50,7 +50,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Convert PLINK files to data array'
+  summary: Convert PLINK files to data array
   doc_url: https://pandas-plink.readthedocs.io
   dev_url: https://github.com/limix/pandas-plink
 
