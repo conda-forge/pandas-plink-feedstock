@@ -5,11 +5,13 @@ Home: https://github.com/limix/pandas-plink
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pandas-plink-feedstock/blob/master/LICENSE.txt)
 
 Summary: Convert PLINK files to data array
 
+Development: https://github.com/limix/pandas-plink
 
+Documentation: https://pandas-plink.readthedocs.io
 
 Current build status
 ====================
