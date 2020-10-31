@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "075c3780c8cbc5be599b836dfde6c983b4df42cb507f1c919861c1b0f7ce6a0c" %}
+{% set version = "2.2.2" %}
+{% set sha256 = "2961c529440311880e64ee10443d9d3440da6d85b8c48901ee71f56dd410a6e5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   skip: true  # [py<37]
 
