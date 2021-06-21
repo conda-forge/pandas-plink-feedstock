@@ -1,6 +1,6 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.2.4" %}
-{% set sha256 = "136e1f33aec5273b317ce49098be6f1db4739bbf5915089a034895aa2b4de09d" %}
+{% set version = "2.2.8" %}
+{% set sha256 = "6728b898b63471fc526e292d852f51464eee43d50ff6ac053931f4a9cc78d659" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   skip: true  # [py<37]
 
@@ -22,7 +22,6 @@ requirements:
   host:
     - python
     - pip
-    - pytest-runner
     - cffi >=1.14.3
   run:
     - Deprecated >=1.2.6
@@ -32,9 +31,8 @@ requirements:
     - pandas >=1.1.3
     - pytest >=5.2.2
     - python
-    - toolz >=0.9
     - tqdm >=4.36.1
-    - xarray >=0.16.1
+    - xarray >=0.18.2
     - zstandard >=0.13.0
 
 test:
