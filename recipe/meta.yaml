@@ -1,27 +1,28 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.2.9" %}
-{% set sha256 = "f5ecacc46c7b92d67968310d14000327333ec1720f35142b091e56da6ef80711" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pandas_plink-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pandas_plink-{{ version }}.tar.gz
+  sha256: f5e5a0ee588c65edea7ea44953523221eb3cf8367700fa5407ad6d72de0a85d9
 
 build:
-  number: 1
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
-  skip: true  # [py<37]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    # - {{ stdlib('c') }}
+    - python                              # [build_platform != target_platform]
+    - cross_python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - python
     - pip
+    - poetry-core
     - cffi >=1.14.3
   run:
     - Deprecated >=1.2.6
@@ -29,6 +30,7 @@ requirements:
     - dask >=2.6.0
     - numpy >=1.17.2
     - pandas >=1.1.3
+    - pandera-base
     - pytest >=5.2.2
     - python
     - tqdm >=4.36.1
@@ -45,7 +47,6 @@ test:
 about:
   home: https://github.com/limix/pandas-plink
   license: MIT
-  license_family: MIT
   license_file: LICENSE.md
   summary: Convert PLINK files to data array
   doc_url: https://pandas-plink.readthedocs.io
