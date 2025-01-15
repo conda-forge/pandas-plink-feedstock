@@ -16,7 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    # - {{ stdlib('c') }}
+    - {{ stdlib('c') }}
     - python                              # [build_platform != target_platform]
     - cross_python_{{ target_platform }}  # [build_platform != target_platform]
   host:
