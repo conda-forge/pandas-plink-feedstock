@@ -1,5 +1,5 @@
 {% set name = "pandas-plink" %}
-{% set version = "2.3.1" %}
+{% set version = "2.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pandas_plink-{{ version }}.tar.gz
-  sha256: f5e5a0ee588c65edea7ea44953523221eb3cf8367700fa5407ad6d72de0a85d9
+  sha256: f43feeb2d974c156cb567807c0d38f66bc6e5b4358d333f1029422adf105df90
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  skip: True  # [py<310]
+  skip: true  # [py<310]
 
 requirements:
   build:
