@@ -40,7 +40,7 @@ requirements:
     - python
     - tqdm >=4.36.1
     - xarray >=0.18.2
-    - zstandard >=0.13.0,<0.25
+    - zstandard >=0.13.0,<0.24
 
 tests:
   - python:
