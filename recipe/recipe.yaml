@@ -29,6 +29,7 @@ requirements:
     - pip
     - poetry-core
     - cffi >=1.14.3
+    - setuptools
   run:
     - Deprecated >=1.2.6
     - cffi >=1.14.3
