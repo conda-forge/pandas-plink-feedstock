@@ -18,7 +18,7 @@ build:
       then:
         - sed -i 's/\^/>=/' pyproject.toml
       else:
-        - sed -i 's/^^/>=/' pyproject.toml
+        - sed -i 's/^^/^>=/' pyproject.toml
     - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
