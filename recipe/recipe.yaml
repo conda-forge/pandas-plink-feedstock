@@ -14,11 +14,11 @@ source:
 build:
   number: 1
   script:
-    if: unix
-    then:
-      - sed -i 's/\^/>=/' pyproject.toml
-    else:
-      - sed -i 's/^^/>=/' pyproject.toml
+    - if: unix
+      then:
+        - sed -i 's/\^/>=/' pyproject.toml
+      else:
+        - sed -i 's/^^/>=/' pyproject.toml
     - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
