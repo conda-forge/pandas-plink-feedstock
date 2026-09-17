@@ -26,6 +26,11 @@ requirements:
         - cffi >=1.14.3
         - python
         - cross-python_${{ target_platform }}
+    - if: unix
+      then:
+        - sed
+      else:
+        - m2-sed
   host:
     - python
     - pip
