@@ -14,7 +14,7 @@ source:
 build:
   number: 1
   script: |
-    sed 's/\^/>=/' pyproject.toml
+    sed -i 's/\^/>=/' pyproject.toml
     ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
@@ -43,7 +43,7 @@ requirements:
     - python
     - tqdm >=4.36.1
     - xarray >=0.18.2
-    - zstandard >=0.13.0,<0.24
+    - zstandard >=0.13.0
 
 tests:
   - python:
